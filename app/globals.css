@@ -13,3 +13,47 @@
   background: linear-gradient(#7e799c, #908f94, #7e799c);
   border-radius: 8px;
 }
+
+
+
+
+
+
+.loader {
+  @apply fixed top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center text-center bg-black;
+}
+
+.loader-ring {
+  animation: loader-ring 1.8s linear infinite;
+  @apply absolute rounded-[50%] w-52 h-52 shadow-md shadow-white;
+}
+
+@keyframes loader-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.text-loader {
+  animation: text-loader 1.5s ease-in-out infinite;
+  @apply z-50 text-xl text-white;
+}
+
+@keyframes text-loader {
+  50% {
+    color: #000;
+  }
+}
+
+
+.b-t {
+  @apply border-4 border-gray-900;
+}

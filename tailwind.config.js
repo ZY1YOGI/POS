@@ -18,5 +18,8 @@ module.exports = {
         sans: ["Poppins", "sans-serif"],
       },
     },
+    container: {
+      center: true
+    }
   },
 }

@@ -5,7 +5,6 @@ import { Sidebar } from '@/components/sidebar'
 
 export const metadata: Metadata = {
   title: 'Home',
-  description: 'Hi',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -14,9 +13,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className='antialiased bg-body-light dark:bg-body-dark'>
         <Header />
         <Sidebar />
-        <main className="min-h-screen mt-5 ml-20">
+        <div className="min-h-screen mt-5 ml-16">
           {children}
-        </main>
+        </div>
       </body>
     </html>
   )
