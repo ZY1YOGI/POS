@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function header() {
   return (
-    <header className="static px-5 py-1 ml-16 border-b border-red-700 shadow shadow-violet-100 dark:shadow-gray-900">
+    <header className="static px-5 py-1 ml-16 border-b border-gray-600 shadow-xl">
       <div className="relative flex items-center justify-between px-5 space-x-10">
         <h1 className="text-3xl font-bold max-md:text-lg dark:text-white">Skybal</h1>
 

@@ -1,9 +1,9 @@
 .Link {
-  @apply p-1.5 text-gray-500 focus:outline-none transition-colors duration-200 rounded-lg dark:text-gray-400 dark:hover:bg-gray-800
+  @apply p-1.5 text-gray-500 focus:outline-none transition-colors rounded-lg dark:text-gray-400 dark:hover:bg-gray-800
         hover:bg-white hover:shadow hover:shadow-white dark:hover:shadow-gray-900;
 }
 
 
 .LinkActive {
-  @apply bg-white ;
+  @apply bg-white;
 }
