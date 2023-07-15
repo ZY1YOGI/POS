@@ -4,8 +4,10 @@
 
 export default function Category() {
   return (
-    <div>
-      <h1>Category</h1>
-    </div>
+    <main>
+      <div className='container'>
+        <h1 className="b-t w-full">Category</h1>
+      </div>
+    </main>
   )
 }

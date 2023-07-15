@@ -1,15 +1,13 @@
 "use client";
 import { useEffect } from "react";
-
 import { MdDarkMode } from "react-icons/md";
 
 import style from "./sidebar.module.css";
 
 
-export default function buttonTheme() {
+const buttonTheme = () => {
   useEffect(() => {
-    const theme =
-      localStorage.getItem("theme") ?? localStorage.setItem("theme", "light");
+    const theme = localStorage.getItem("theme") ?? localStorage.setItem("theme", "light");
     if (theme === "light") {
       document.documentElement.className = "light";
       document.documentElement.setAttribute("data-theme", "light");
@@ -30,9 +28,13 @@ export default function buttonTheme() {
       localStorage.setItem("theme", "light");
     }
   };
+
   return (
-    <button className={style.link} onClick={changeTheme} role="switch" id="switch-theme">
+    <button className={style.buttonTheme} onClick={changeTheme} role='switch' id='switch-theme'>
       <MdDarkMode size={35} />
     </button>
   )
 }
+
+
+export default buttonTheme;
