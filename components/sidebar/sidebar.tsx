@@ -39,49 +39,45 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="fixed top-0 z-10 h-screen border-r border-gray-600 shadow-2xl">
-      <div className="flex flex-col items-center w-16 py-8 space-y-8">
+    <aside className={style.aside}>
+      <div className={style.container}>
         <Link href="/">
-          <img
-            className="w-12 h-12 rounded-full"
-            src="https://t4.ftcdn.net/jpg/04/50/97/71/360_F_450977120_iNKwznk27ghqhL58rvuh3w1xj1mPVHdy.jpg"
-            alt=""
-          />
+          <img className={style.image} src="https://t4.ftcdn.net/jpg/04/50/97/71/360_F_450977120_iNKwznk27ghqhL58rvuh3w1xj1mPVHdy.jpg" alt="" />
         </Link>
 
-        <Link href="/" className={style.Link + " " + style.LinkActive}>
+        <Link href="/" className={style.link + " " + style.linkActive}>
           <AiOutlineHome size={35} />
         </Link>
 
-        <Link href="/category" className={style.Link}>
+        <Link href="/category" className={style.link}>
           <BiCategory size={35} />
         </Link>
 
-        <Link href="/" className={style.Link}>
+        <Link href="/" className={style.link}>
           <HiOutlineUsers size={35} />
         </Link>
 
-        <Link href="/" className={style.Link}>
+        <Link href="/" className={style.link}>
           <SlBasket size={35} />
         </Link>
 
-        <Link href="/" className={style.Link}>
+        <Link href="/" className={style.link}>
           <LiaFileInvoiceSolid size={35} />
         </Link>
 
-        <Link href="/" className={style.Link}>
+        <Link href="/" className={style.link}>
           <MdOutlineNotificationsActive size={35} />
         </Link>
 
-        <Link href="/" className={style.Link}>
+        <Link href="/" className={style.link}>
           <TbSettingsCog size={35} />
         </Link>
 
-        <Link href="/" className={style.Link}>
+        <Link href="/" className={style.link}>
           <TbSettingsCog size={35} />
         </Link>
 
-        <button className={style.Link} onClick={changeTheme} role="switch" id="switch-theme">
+        <button className={style.link} onClick={changeTheme} role="switch" id="switch-theme">
           <MdDarkMode size={35} />
         </button>
       </div>
