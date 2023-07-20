@@ -54,18 +54,16 @@
 
 
 .container-login {
-  @apply bg-white px-12 pt-10 pb-8 flex justify-center items-center rounded-xl flex-col;
+  @apply bg-white px-12 pt-10 pb-8 flex justify-center items-center rounded-xl flex-col shadow-lg shadow-white;
 }
 
 .logo {
-  @apply flex items-center;
+  @apply flex items-center text-3xl font-bold space-x-1.5;
 }
 .logo img {
   @apply h-16;
 }
-.logo h1 {
-  @apply text-3xl font-bold
-}
+
 
 
 
@@ -92,6 +90,8 @@
   @apply text-sm text-red-500 absolute -bottom-6
 }
 
+
+
 .remember-forgot {
   margin: 0px 0 0;
   @apply flex justify-between items-center text-sm;
@@ -110,5 +110,5 @@
 }
 
 button {
-  @apply bg-body-light w-full h-10 border outline-none rounded-xl text-xl mt-10 hover:bg-text-gray-600 duration-300;
+  @apply bg-body-light w-full h-10 border outline-none rounded-xl text-xl mt-10 hover:bg-gray-800 duration-300 hover:text-white;
 }
