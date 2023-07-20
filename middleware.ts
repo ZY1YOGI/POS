@@ -5,7 +5,7 @@ export function middleware(request: NextRequest) {
   const cookie = request.cookies.get("token")?.value;
   if (cookie === undefined) {
     const url = request.nextUrl.clone();
-    url.pathname = "/auth/login";
+    url.pathname = "/login";
     return NextResponse.redirect(url, request);
   }
 }

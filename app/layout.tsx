@@ -1,8 +1,7 @@
 import './index.css'
 import type { Metadata } from 'next'
 
-import { Header } from '@/components/header'
-import { Sidebar } from '@/components/sidebar'
+import { Header, Sidebar } from '@/components'
 
 
 export const metadata: Metadata = {

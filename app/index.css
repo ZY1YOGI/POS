@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -13,11 +10,6 @@
   background: linear-gradient(#7e799c, #908f94, #7e799c);
   border-radius: 8px;
 }
-
-
-
-
-
 
 .loader {
   @apply fixed top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center text-center bg-black;
@@ -53,7 +45,70 @@
   }
 }
 
-
 .b-t {
   @apply border-4 border-gray-900;
+}
+
+
+
+
+
+.container-login {
+  @apply bg-white px-12 pt-10 pb-8 flex justify-center items-center rounded-xl flex-col;
+}
+
+.logo {
+  @apply flex items-center;
+}
+.logo img {
+  @apply h-16;
+}
+.logo h1 {
+  @apply text-3xl font-bold
+}
+
+
+
+.input-box {
+  @apply relative border-b-2 rounded-lg pl-3 pr-8 my-10 flex;
+}
+
+.input-box label {
+  @apply absolute top-1/2 left-1.5 -translate-y-1/2 text-gray-600 font-semibold duration-300;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+
+.input-box input {
+  @apply py-3 border-none outline-none text-xl;
+}
+
+
+
+.input-error {
+  @apply text-sm text-red-500 absolute -bottom-6
+}
+
+.remember-forgot {
+  margin: 0px 0 0;
+  @apply flex justify-between items-center text-sm;
+}
+
+.remember-forgot label {
+  @apply flex;
+}
+
+.remember-forgot label input {
+  margin-right: 3px;
+}
+
+.remember-forgot a {
+  @apply hover:underline;
+}
+
+button {
+  @apply bg-body-light w-full h-10 border outline-none rounded-xl text-xl mt-10 hover:bg-text-gray-600 duration-300;
 }
