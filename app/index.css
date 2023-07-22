@@ -54,7 +54,7 @@
 
 
 .container-login {
-  @apply bg-white px-12 pt-10 pb-8 flex justify-center items-center rounded-xl flex-col shadow-lg shadow-white;
+  @apply flex flex-col items-center justify-center px-12 pt-10 pb-8 bg-white rounded-xl;
 }
 
 .logo {
@@ -68,7 +68,7 @@
 
 
 .input-box {
-  @apply relative border-b-2 rounded-lg pl-3 pr-8 my-10 flex;
+  @apply relative flex pl-3 pr-8 my-10 border-b-2 rounded-lg;
 }
 
 .input-box label {
@@ -81,7 +81,7 @@
 }
 
 .input-box input {
-  @apply py-3 border-none outline-none text-xl;
+  @apply py-3 text-xl border-none outline-none;
 }
 
 
@@ -94,7 +94,7 @@
 
 .remember-forgot {
   margin: 0px 0 0;
-  @apply flex justify-between items-center text-sm;
+  @apply flex items-center justify-between text-sm;
 }
 
 .remember-forgot label {
@@ -110,5 +110,5 @@
 }
 
 button {
-  @apply bg-body-light w-full h-10 border outline-none rounded-xl text-xl mt-10 hover:bg-gray-800 duration-300 hover:text-white;
+  @apply w-full h-10 mt-10 text-xl duration-300 border outline-none bg-body-light rounded-xl hover:bg-gray-800 hover:text-white;
 }
