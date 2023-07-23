@@ -1,0 +1,52 @@
+.container_login {
+  @apply flex flex-col items-center justify-center px-12 pt-10 pb-8 bg-white rounded-xl;
+}
+
+.logo {
+  @apply flex items-center text-3xl font-bold space-x-1.5;
+}
+
+.logo img {
+  @apply h-16;
+}
+
+.input_box {
+  @apply relative flex pl-3 pr-8 my-12 border-b-2 rounded-lg;
+}
+
+.input_box label {
+  @apply absolute top-1/2 left-1.5 -translate-y-1/2 text-gray-600 font-semibold duration-300;
+}
+
+.input_box input:focus ~ label,
+.input_box input:valid ~ label {
+  top: -5px;
+}
+
+.input_box input {
+  @apply py-3 text-xl border-none outline-none;
+}
+
+.input_error {
+  @apply text-sm text-red-500 absolute -bottom-6;
+}
+
+.remember_forgot {
+  @apply flex items-center justify-between text-sm;
+}
+
+.remember_forgot label {
+  @apply flex;
+}
+
+.remember_forgot label input {
+  margin-right: 3px;
+}
+
+.remember_forgot a {
+  @apply hover:underline;
+}
+
+.btn_login {
+  @apply flex items-center justify-center w-full h-10 mt-10 text-xl duration-300 border outline-none bg-body-light rounded-xl hover:bg-gray-800 hover:text-white disabled:cursor-wait;
+}

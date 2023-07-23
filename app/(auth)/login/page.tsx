@@ -4,6 +4,8 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from 'axios';
 
+import style from './login.module.css'
+
 export default function Login() {
 
     const [errorUsername, setErrorUsername] = useState<string>('')
@@ -37,27 +39,27 @@ export default function Login() {
 
 
     return (
-        <div className="container-login">
-            <div className="logo">
+        <div className={style.container_login}>
+            <div className={style.logo}>
                 <img src="/logo.png" alt="logo" />
                 <h1>Login</h1>
             </div>
             <form onSubmit={onLogin}>
-                <div className="input-box">
+                <div className={style.input_box}>
                     <input type="text" name="username" required id="username" />
                     <label htmlFor="username">User Name</label>
-                    <span className="input-error">{errorUsername}</span>
+                    <span className={style.input_error}>{errorUsername}</span>
                 </div>
-                <div className="input-box">
+                <div className={style.input_box}>
                     <input type="password" name="password" required id="password" />
                     <label htmlFor="password">Password</label>
-                    <span className="input-error">{errorPassword}</span>
+                    <span className={style.input_error}>{errorPassword}</span>
                 </div>
-                <div className="remember-forgot">
+                <div className={style.remember_forgot}>
                     <label><input type="checkbox" name="remember" />Remember me</label>
                     <a href="#">Forgot Password?</a>
                 </div>
-                <button type="submit" className="btn-login" disabled={loading}>
+                <button type="submit" className={style.btn_login} disabled={loading}>
                     {loading ?
                         <svg className="w-8 h-8 mr-3 animate-spin" viewBox="0 0 24 24"> <path className="fill-gray-200" d="M12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5ZM3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z"></path>
                             <path className="fill-gray-800" d="M16.9497 7.05015C14.2161 4.31648 9.78392 4.31648 7.05025 7.05015C6.65973 7.44067 6.02656 7.44067 5.63604 7.05015C5.24551 6.65962 5.24551 6.02646 5.63604 5.63593C9.15076 2.12121 14.8492 2.12121 18.364 5.63593C18.7545 6.02646 18.7545 6.65962 18.364 7.05015C17.9734 7.44067 17.3403 7.44067 16.9497 7.05015Z"></path>
