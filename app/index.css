@@ -68,7 +68,7 @@
 
 
 .input-box {
-  @apply relative flex pl-3 pr-8 my-10 border-b-2 rounded-lg;
+  @apply relative flex pl-3 pr-8 my-12 border-b-2 rounded-lg;
 }
 
 .input-box label {
@@ -109,6 +109,6 @@
   @apply hover:underline;
 }
 
-button {
-  @apply w-full h-10 mt-10 text-xl duration-300 border outline-none bg-body-light rounded-xl hover:bg-gray-800 hover:text-white;
+.btn-login {
+  @apply flex items-center justify-center w-full h-10 mt-10 text-xl duration-300 border outline-none bg-body-light rounded-xl hover:bg-gray-800 hover:text-white disabled:cursor-wait;
 }
