@@ -3,11 +3,12 @@ import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
   const cookie = request.cookies.get("token")?.value;
-  if (cookie === undefined) {
-    const url = request.nextUrl.clone();
-    url.pathname = "/login";
-    return NextResponse.redirect(url, request);
-  }
+
+  // if (cookie === undefined) {
+  //   const url = request.nextUrl.clone();
+  //   url.pathname = "/login";
+  //   return NextResponse.redirect(url, request);
+  // }
 }
 
 export const config = {
