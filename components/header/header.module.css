@@ -7,7 +7,7 @@
 }
 
 .name {
-  @apply md:text-3xl font-semibold text-xl;
+  @apply text-xl font-semibold md:text-3xl;
 }
 
 .container_user {

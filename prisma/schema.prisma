@@ -25,3 +25,10 @@ model User {
   image    String?
   role     Role    @default(USER)
 }
+
+model Category {
+  id          Int     @id @default(autoincrement())
+  name        String
+  description String?
+  image       String?
+}
