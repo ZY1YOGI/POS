@@ -3,19 +3,32 @@ import { prisma } from "@/lib/prisma";
 
 export async function POST(request: NextRequest) {
   const { name } = await request.json();
+  try {
+    const checkCategory = await prisma.category.findFirst({
+      where: {
+        name: {
+          equals: name,
+          mode: "insensitive",
+        },
+      },
+    });
 
-  const category = await prisma.category.create({
-    data: {
-      name: name,
-    },
-  });
+    if (checkCategory)
+      return NextResponse.json({
+        errors: { name: "The Name Category already exists." },
+        status: 422,
+      });
 
-  console.log(category);
-
-  // if (!category)
-  //   return NextResponse.json({
-  //     errors: { password: "category!" },
-  //   });
-
-  return NextResponse.json({ status: true });
+    const category = await prisma.category.create({
+      data: {
+        name: name,
+      },
+    });
+    return NextResponse.json({ category });
+  } catch (err) {
+    return NextResponse.json({
+      message: `Something went wrong ${err}`,
+      status: 500,
+    });
+  }
 }
