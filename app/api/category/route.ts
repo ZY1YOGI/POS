@@ -12,9 +12,9 @@ export async function POST(request: NextRequest) {
 
   console.log(category);
 
-  // if (user.password !== password)
+  // if (!category)
   //   return NextResponse.json({
-  //     errors: { password: "The password is incorrect!" },
+  //     errors: { password: "category!" },
   //   });
 
   return NextResponse.json({ status: true });
