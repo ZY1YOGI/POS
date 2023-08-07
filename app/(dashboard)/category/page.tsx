@@ -1,29 +1,6 @@
+import FormCategory from '@/components/forms/FormCategory';
 import { TableActions } from '@/components/table';
 import type { Metadata } from 'next'
-
-
-
-
-function FormCategory() {
-  return (
-    <form className="grid grid-cols-2 mt-6 gap-x-5 gap-y-8 max-md:grid-cols-1">
-      <div className='space-y-3'>
-        <label htmlFor="input-name" className="block font-medium text-gray-900 md:text-lg dark:text-white">Enter The Name Category <span className='text-red-500'>*</span></label>
-        <input type="text" id="input-name" className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-800 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Name" />
-        <span className="block text-red-500">The Name Category is Requeued</span>
-      </div>
-      <div className='flex items-center justify-center'>
-        <button className="px-6 py-3 text-white transition-colors duration-200 transform bg-blue-500 rounded-md md:w-1/2 hover:bg-blue-700 focus:outline-none focus:bg-gray-600">Create Category</button>
-      </div>
-    </form>
-  )
-}
-
-
-
-
-
-
 
 
 
@@ -37,8 +14,6 @@ export const metadata: Metadata = {
 
 export default function Category() {
 
-
-
   return (
     <>
 
@@ -50,6 +25,7 @@ export default function Category() {
           <FormCategory />
         </div>
       </section>
+
 
       <section className="container p-5 mx-auto my-8 bg-white rounded-lg shadow-lg bg-opacity-30 dark:text-white dark:bg-gray-900">
         <div>

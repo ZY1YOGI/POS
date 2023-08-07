@@ -5,13 +5,13 @@ export default function TableActions() {
   return (
     <td className="flex justify-center space-x-3.5">
       <button className="w-5 transition-all hover:text-green-700 hover:scale-125 md:w-6">
-        <MdOutlineRemoveRedEye size='auto' className="w-5 md:w-7" />
+        <MdOutlineRemoveRedEye className="w-5 md:w-7" />
       </button>
       <button className="transition-all hover:text-blue-700 hover:scale-125">
-        <MdOutlineEdit size='auto' className="w-5 md:w-7" />
+        <MdOutlineEdit className="w-5 md:w-7" />
       </button>
       <button className="w-5 transition-all hover:text-red-700 hover:scale-125 md:w-6">
-        <BsTrash size='auto' className="w-5 md:w-7" />
+        <BsTrash className="w-5 md:w-7" />
       </button>
     </td>
   )
