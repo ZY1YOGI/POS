@@ -1,4 +1,34 @@
+import { TableActions } from '@/components/table';
 import type { Metadata } from 'next'
+
+
+
+
+function FormCategory() {
+  return (
+    <form className="grid grid-cols-2 mt-6 gap-x-5 gap-y-8 max-md:grid-cols-1">
+      <div className='space-y-3'>
+        <label htmlFor="input-name" className="block font-medium text-gray-900 md:text-lg dark:text-white">Enter The Name Category <span className='text-red-500'>*</span></label>
+        <input type="text" id="input-name" className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-800 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Name" />
+        <span className="block text-red-500">The Name Category is Requeued</span>
+      </div>
+      <div className='flex items-center justify-center'>
+        <button className="px-6 py-3 text-white transition-colors duration-200 transform bg-blue-500 rounded-md md:w-1/2 hover:bg-blue-700 focus:outline-none focus:bg-gray-600">Create Category</button>
+      </div>
+    </form>
+  )
+}
+
+
+
+
+
+
+
+
+
+
+
 
 export const metadata: Metadata = {
   title: 'Category',
@@ -10,24 +40,43 @@ export default function Category() {
 
 
   return (
-    <section className="container" id="add-user">
+    <>
+
       <h1 className="text-6xl font-bold tracking-widest text-center blur-[.8px] max-md:text-4xl">CATEGORY</h1>
 
-      <div className="px-5 py-8 mt-12 bg-white shadow rounded-xl dark:bg-gray-800 shadow-gray-500 max-md:mx-3 max-sm:mx-1.5">
-        <h1 className="text-3xl font-bold text-center">Add Category</h1>
-        <form className="grid grid-cols-2 mt-6 gap-x-5 gap-y-8 max-md:grid-cols-1">
-          <div className="flex flex-col space-y-1.5">
-            <label htmlFor="input-name" className=' dark:text-white'>Enter The Name Category</label>
-            <input type="text" id="input-name" name="name" className="b-t py-2 px-3.5 rounded-xl" placeholder="Name" />
-            <span className="text-sm text-red-500">{ /* The Filed is Requeued */}</span>
-          </div>
-          <div className="flex flex-col space-y-1.5">
-            <label htmlFor="input-description" className='dark:text-white'>Enter The Description Category</label>
-            <textarea id="input-description" name="description" className="b-t py-2 px-3.5 rounded-xl" placeholder="Description..." />
-            <span className="text-sm text-red-500">{ /* The Filed is Requeued */}</span>
-          </div>
-        </form>
-      </div>
-    </section>
+      <section className="container">
+        <div className="container p-5 mx-auto my-8 bg-white rounded-lg shadow-lg bg-opacity-30 dark:text-white dark:bg-gray-900">
+          <h1 className="text-3xl font-bold text-center">Add Category</h1>
+          <FormCategory />
+        </div>
+      </section>
+
+      <section className="container p-5 mx-auto my-8 bg-white rounded-lg shadow-lg bg-opacity-30 dark:text-white dark:bg-gray-900">
+        <div>
+
+        </div>
+        <table className='w-full'>
+          <thead className='border-b-4 md:text-3xl dark:text-gray-200'>
+            <tr>
+              <th>NAME</th>
+              <th>ACTIONS</th>
+            </tr>
+          </thead>
+          <tbody className='text-lg text-center md:text-2xl'>
+            <tr className='border-b'>
+              <td>test</td>
+              <TableActions />
+            </tr>
+            <tr className='border-b'>
+              <td>test</td>
+              <TableActions />
+            </tr>
+          </tbody>
+
+        </table>
+
+      </section>
+
+    </>
   );
 }
